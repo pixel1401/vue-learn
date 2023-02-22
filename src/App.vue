@@ -46,7 +46,7 @@ export default defineComponent({
     return {   
       posts: ref<IPost[]>([]) ,
       isLoadPosts : true , 
-      selectedSort : 'title' as 'title' | 'body' | '' ,
+      selectedSort : '' as 'title' | 'body' | '' ,
       sortOptions : [
         {value: "title" , name : 'По названию'},
         {value: "body" , name : 'По содержимому'},
@@ -65,6 +65,8 @@ export default defineComponent({
 
 
     deletePost ( post : IPost ) {
+      console.log('wadaw');
+      
       for (let index = 0; index < this.posts.length; index++) {
         const element = this.posts[index];
         if(element.id === post.id ) {
@@ -117,9 +119,9 @@ export default defineComponent({
 
     selectedQuery () : IPost[] {
       if(this.postsQuery == '') {
-        return this.selectedPost.filter((post) => true)
+        return  this.selectedPost.filter((post) => true)
       }else {
-        return this.selectedPost.filter((post) => post.title.includes(this.postsQuery))
+        return  this.selectedPost.filter((post) => post.title.includes(this.postsQuery))
       }
     }
 

@@ -27,7 +27,7 @@ export default defineComponent({
             required: true
         }
     },
-    setup(props) {
+    data(props) {
         return {
             posts: props.posts
         }
