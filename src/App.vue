@@ -51,7 +51,7 @@ export default defineComponent({
     return {
       posts: ref<IPost[]>([]),
       isLoadPosts: true,
-      isPaginationOrScroll : false ,
+      isPaginationOrScroll : true ,
       selectedSort: '' as 'title' | 'body' | '',
       sortOptions: [
         { value: "title", name: 'По названию' },

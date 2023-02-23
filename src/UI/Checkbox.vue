@@ -1,22 +1,24 @@
 
 <template>
-    <input type="checkbox" id="checkbox" :value="modelValue" @input="onChange" />
+    <input type="checkbox" id="checkbox" :checked="modelValue" @change="onChange" />
 </template>
 
 <script>
+import { PropType, defineComponent } from 'vue';
 
-export default {
+export default defineComponent ({
     name: 'my-checkbox',
     props: {
-        modelValue : Boolean
+        modelValue : {
+            require: true,
+            type : Boolean
+        }
     },
-    
     
     methods: {
         onChange(e) {
-            console.log(e);
-            this.$emit('update:modelValue' , true )   
+            this.$emit('update:modelValue' , e.target.checked )   
         }
     }
-}
+})
 </script>
