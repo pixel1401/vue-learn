@@ -1,4 +1,3 @@
-
 <template>
     <input type="checkbox" id="checkbox" :checked="modelValue" @change="onChange" />
 </template>

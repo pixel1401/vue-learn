@@ -14,7 +14,7 @@
 <script lang="ts">
 import { IPost } from '@/Modals/IPost';
 import { PropType, defineComponent } from 'vue';
-import PostItem from '@/components/ProductItem.vue';
+import PostItem from '@/components/PostItem.vue';
 
 
 export default defineComponent({

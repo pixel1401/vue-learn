@@ -4,8 +4,10 @@
             <div><strong>Названия</strong>{{ post.title }}</div>
             <div><strong>Описание</strong>{{ post.body }}</div>
         </div>
-
-        <my-button @click="$emit('remove' , post)" class="post__btn">Удалить</my-button>
+        <div class="post__btns">
+            <my-button @click="$router.push(`/post/${post.id}`)" >Открыть</my-button>
+            <my-button @click="$emit('remove' , post)" class="post__btn">Удалить</my-button>
+        </div>
     </div>
 </template>
 
@@ -64,5 +66,10 @@ export default defineComponent({
         gap: 5px;
     }
 
+    &__btns {
+        margin-left: 20px;
+        display: flex;
+        gap: 5px;
+    }
 }
 </style>

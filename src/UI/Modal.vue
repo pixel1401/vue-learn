@@ -7,26 +7,11 @@
 </template>
 
 <script lang="ts">
+    import modalMixin from "@/mixins/modalMixin";
     import { defineComponent } from "vue";
     export default defineComponent({
         name : 'my-modal',
-        data() {
-            return {
-                
-            }
-        } ,
-        props : {
-            show : {
-                type : Boolean ,
-                default : false
-            }
-        },
-
-        methods: {
-            hideModal() {
-                this.$emit('update:show' , false);
-            }
-        }
+        mixins: [modalMixin],   
     })
 </script>
 

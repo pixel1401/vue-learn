@@ -17,12 +17,12 @@
 
 <style lang="scss" scoped>
     .btn {
+        cursor: pointer;
         padding: 10px 20px;
         border: 1px solid teal;
         background: none;
         color: black;
         font-weight: 600;
-
     }
 
 </style>
