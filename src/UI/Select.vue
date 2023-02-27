@@ -12,7 +12,6 @@
         props: {
             modelValue : {
                 type: String,
-                
             },
 
             options : {
@@ -23,7 +22,7 @@
         },
         methods: {
             changeOption (event : any ) {
-                this.$emit('update:modalValue' , event.currentTarget.value)
+                this.$emit('update:modelValue' , event.currentTarget.value)
             }
         },
         

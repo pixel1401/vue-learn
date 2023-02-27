@@ -3,6 +3,7 @@ import { Component } from "vue"
 import Main from '@/pages/Main.vue';
 import Posts from '@/pages/Posts.vue'
 import Post from '@/pages/Post.vue'
+import PostsWithStore from '@/pages/PostsWithStore.vue';
 
 interface IPages {
     path : string,
@@ -17,7 +18,7 @@ const routes : IPages[] = [
     
     {
         path: '/post' ,
-        component : Posts
+        component : PostsWithStore
     },
 
     {
