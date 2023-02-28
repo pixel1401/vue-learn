@@ -1,8 +1,11 @@
 <template>
     <nav class="nav">
         <div @click="$router.push('/')" class="nav__logo" >Logo</div>
-        <my-button  @click="$router.push('/post')"
-        >Посты</my-button>
+        <div class="nav__btns">
+            <my-button  @click="$router.push('/post')">Посты</my-button>
+            <my-button  @click="$router.push('/post-store')">Посты-Store</my-button>
+            <my-button  @click="$router.push('/post-composition')">Посты-CompositionApi</my-button>
+        </div>
     </nav>
 </template>
 
@@ -24,6 +27,11 @@
         margin-bottom: 25px;
             &__logo {
                 cursor: pointer;
+            }
+
+            &__btns {
+                display: flex;
+                gap: 10px;
             }
     }
 </style>

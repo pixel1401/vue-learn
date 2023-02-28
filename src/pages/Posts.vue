@@ -8,7 +8,7 @@
       </div>
       <div class="post__top">
         <post-form @create="createPost" />
-        <my-select v-model:modalValue="selectedSort" :options=" sortOptions"></my-select>
+        <my-select v-model:modelValue="selectedSort" :options=" sortOptions"></my-select>
       </div>
       <post-list v-if="isLoadPosts == false && posts.length > 0" @deletePost="deletePost" :posts="selectedQuery" />
       <div v-else>Идет загрузка</div>
@@ -109,9 +109,9 @@ import { IObserver } from '@/directives/VObserver';
   
   
   
-      changePage(page: number) {
-        this.currentPage = page;
-      },
+        changePage(page: number) {
+          this.currentPage = page;
+        },
   
     },
   

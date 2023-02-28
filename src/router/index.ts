@@ -4,6 +4,7 @@ import Main from '@/pages/Main.vue';
 import Posts from '@/pages/Posts.vue'
 import Post from '@/pages/Post.vue'
 import PostsWithStore from '@/pages/PostsWithStore.vue';
+import PostSComposition from '@/pages/PostsCompositionApi.vue';
 
 interface IPages {
     path : string,
@@ -18,7 +19,17 @@ const routes : IPages[] = [
     
     {
         path: '/post' ,
+        component : Posts
+    },
+
+    {
+        path : '/post-store',
         component : PostsWithStore
+    },
+
+    {
+        path : '/post-composition',
+        component : PostSComposition
     },
 
     {
