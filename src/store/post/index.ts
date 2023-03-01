@@ -23,7 +23,7 @@ const post : Module<PostModuleState , RootState> = {
     getters,
     mutations,
     actions ,
-    namespaced : true
+    namespaced : true,
 }
 
 

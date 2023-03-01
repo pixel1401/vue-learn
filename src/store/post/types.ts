@@ -13,4 +13,5 @@ export default interface PostModuleState {
     limitPage: number,
     currentPage: number,
     totalPage: number,
+    currentPost?: IPost
 }

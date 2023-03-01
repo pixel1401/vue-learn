@@ -14,7 +14,8 @@ export enum PostMutations {
     SET_TOTAL_PAGE = 'SET_TOTAL_PAGE',
     UPDATE_QUERY= 'UPDATE_QUERY',
     UPDATE_SORT_OPTIONS = 'UPDATE_SORT_OPTIONS',
-    UPDATE_IS_SCROLL_OR_PAGINATION = 'UPDATE_IS_SCROLL_OR_PAGINATION'
+    UPDATE_IS_SCROLL_OR_PAGINATION = 'UPDATE_IS_SCROLL_OR_PAGINATION',
+    SET_CURRENT_POST = 'SET_CURRENT_POST'
 }
 
 
@@ -49,6 +50,9 @@ const mutations : MutationTree<PostModuleState> = {
     },
     [PostMutations.UPDATE_IS_SCROLL_OR_PAGINATION] (state , payload : boolean) {
         state.isPaginationOrScroll = payload;
+    },
+    [PostMutations.SET_CURRENT_POST] (state , payload : IPost) {
+        state.currentPost = payload;
     },
 }
 

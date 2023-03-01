@@ -15,6 +15,7 @@
 
     import { IPost } from '@/Modals/IPost';
     import { PropType, defineComponent } from 'vue';
+import { mapActions, mapMutations } from 'vuex';
     
 
 
@@ -46,7 +47,7 @@ export default defineComponent({
 
 
 
-<style lang="scss" scoped>
+<style lang="scss" scoped >
 .post {
     display: flex;
     justify-content: space-between;

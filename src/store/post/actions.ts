@@ -1,3 +1,4 @@
+import { IPost } from "@/Modals/IPost";
 import axios from "axios";
 import { ActionTree } from "vuex";
 import RootState from "../types";
@@ -40,7 +41,36 @@ const actions : ActionTree<PostModuleState , RootState>= {
 
     setCurrentPage({state , commit} , page : number) {
       commit( PostMutations.CHANGE_PAGE  , page);
+    },
+
+    setCurrentPost({state , commit} , id : string) {
+
+      
+      let post : IPost | undefined ;
+
+      console.log('wadawda' , id);
+      
+
+      console.log(state.posts);
+      for(let a of state.posts) {
+        if(a.id == +id) {
+          
+          post = a;
+          break;
+        }
+      }
+      if(post) {
+        commit(PostMutations.SET_CURRENT_POST , post);
+      }
+    },
+
+
+    setPosts ({state , commit} , posts : IPost[]) {
+      commit(PostMutations.SET_POST , posts)
     }
+
+
+
 }
 
 
